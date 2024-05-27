@@ -1,35 +1,46 @@
+
+This is made by Chen Yizuo (Beck)
+
 html{
 	font-family: "microsoft yahei,arial, helvetica, sans-serif";
 	font-size: 16px;
 }
+/*Eliminate default inner and outer margins for all elements*/
 *{
 	margin: 0;
 	padding: 0;
 }
+/*Eliminate list elements (li, The default style for ul, ol (such as small dots)*/
 li,ul,ol{
 	list-style: none;
 }
+/*Remove the default underline from the link and set the link color to black*/
 a{
 	text-decoration: none;
 	color: #000;
 }
+/*Set an element named flex as an elastic layout*/
 .flex{
 	display: flex;
 }
+/*Set an element named auto to be horizontally centered (usually used for block level elements)*/
 .auto{
 	margin: 0 auto;
 }
+/*Clearing gaps caused by floating layouts is commonly used to solve the problem of height collapse of floating elements inside containers*/
 .clearfix::after{
 	content: '';
 	display: block;
 	clear: both;
 }
+/*Set the element style with the id of the app, which is a relatively positioned container used to display a list of images*/
+/*Note: Setting the width to 1500px here may not be responsive, consider using percentages or window units*/
 #app{
 	position: relative;
 	width: 1500px;
 	height: 700px;
 	overflow: hidden;
-	margin: 0 auto 0;
+	margin: 0 auto 0;/*The vertical margin is 0, and the horizontal margin is automatically centered*/
 }
 #app .list-img{
 	position: absolute;
